@@ -49,7 +49,7 @@ const MobileHeader: FC<IHeaderProps> = ({User}) => {
                 <img 
                     style={{borderRadius: '50%', cursor: 'pointer' }} 
                     width={46} 
-                    src={User.picture} 
+                    src={User.picture} referrerPolicy="no-referrer"
                     alt="avatar" 
                     onClick={() => setIsOpen(true)}
                     />

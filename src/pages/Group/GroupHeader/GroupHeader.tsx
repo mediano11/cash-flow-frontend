@@ -52,6 +52,7 @@ const GroupHeader: FC<IPropsGroupHeader> = ({ groupInfo }) => {
                     <img className={classes.photo}
                         alt={'user icon'}
                         src={isUrl(el.user.picture) ? el.user.picture : userIcon}
+                        referrerPolicy="no-referrer"
                     />
                 </div>
             ).slice(0, 3)

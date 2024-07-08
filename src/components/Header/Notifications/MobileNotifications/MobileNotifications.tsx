@@ -51,7 +51,7 @@ const MobileNotifications: FC = () => {
                 key={admin.id + group.title + i}>
                 <form className={classes.inviteForm}>
                     <div className={classes.inviteWrapper}>
-                        <img src={admin.picture} alt={admin.first_name + '_avatar'} />
+                        <img src={admin.picture} alt={admin.first_name + '_avatar'} referrerPolicy="no-referrer" />
                         <div className={classes.promo}>
                             <span className={classes.promoName}>{userName}</span>
                             <span> has invited you to the group </span>

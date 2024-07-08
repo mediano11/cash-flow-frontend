@@ -53,7 +53,9 @@ const Users: React.FC = () => {
                             <div className={classes.icon}>
                                 <img className={classes.photo}
                                     alt={'user icon'}
-                                    src={isUrl(picture) ? picture : userIcon} />
+                                    src={isUrl(picture) ? picture : userIcon} 
+                                    referrerPolicy="no-referrer"
+                                    />
                             </div>
                             <div className={classes.memberInfo}>
                                 <h6 className={classes.name}>{full_name()}</h6>

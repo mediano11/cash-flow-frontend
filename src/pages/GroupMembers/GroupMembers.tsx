@@ -94,7 +94,9 @@ const History: React.FC = () => {
                                 <img className={classes.photo}
                                     style={{ borderRadius: '50%' }}
                                     alt={'user icon'}
-                                    src={isUrl(picture) ? picture : userIcon} />
+                                    src={isUrl(picture) ? picture : userIcon}
+                                    referrerPolicy="no-referrer"
+                                />
                             </div>
                             <div className={classes.memberInfo}>
                                 <h6 className={classes.name}>{full_name()}</h6>

@@ -54,7 +54,9 @@ export const RecentOperationGroupCard: FC<IRecentOperationGroupCard> = ({ groupI
     const getAdminIcon = () => {
         return <img className={classes.photo}
                 alt={'user icon'}
-            src={isUrl(item.user_picture) ? item.user_picture : userIcon}/>   
+            src={isUrl(item.user_picture) ? item.user_picture : userIcon}
+            referrerPolicy="no-referrer"
+            />   
     }
 
     const name = item.user_first_name + ' ' + item.user_last_name 

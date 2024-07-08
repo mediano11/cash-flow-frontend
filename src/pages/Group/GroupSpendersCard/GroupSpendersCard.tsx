@@ -61,6 +61,7 @@ const GroupSpendersCard: FC<IGroupSpendersCardProps> = ({data, isLoading, isErro
                                         <img className={classes.photo}
                                             alt={'user icon'}
                                             src={isUrl(photo) ? photo : userIcon}
+                                            referrerPolicy="no-referrer"
                                         />
                                         <p className={classes.name}>{name}</p>
                                     </div>

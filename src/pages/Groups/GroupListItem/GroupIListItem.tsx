@@ -64,6 +64,7 @@ const GroupItem: FC<IGroupItemProps> = ({ id,
                 <img className={classes.photo}
                     alt={'user icon'}
                     src={isUrl(icon) ? icon : userIcon}
+                    referrerPolicy="no-referrer"
                 />
             </div>
         );

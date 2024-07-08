@@ -61,6 +61,7 @@ const GroupMemberUserCard: React.FC<IGroupMemberCardProps> = ({ member, isMember
                         <img className={classes.photo}
                             alt={'user icon'}
                             src={isUrl(picture) ? picture : userIcon}
+                            referrerPolicy="no-referrer"
                         />
                     </div>
                     <div className={classes.personal__data}>

@@ -30,6 +30,7 @@ const UserAccountCard: FC = () => {
                                 alt={'user icon'}
                                 style={{borderRadius: '50%'}}
                                 src={User?.picture}
+                                referrerPolicy="no-referrer"
                             />
                         </div>
                         <div className={classes.personal__data}>

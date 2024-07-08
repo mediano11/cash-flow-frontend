@@ -90,6 +90,7 @@ const SearchBar: FC<{ groupId: number }> = ({ groupId }) => {
                     <img className={classes.photo}
                         alt={'user icon'}
                         src={isUrl(photo) ? photo : userIcon}
+                        referrerPolicy="no-referrer"
                     />
                 </div>
                 <p className={classes.name}>{name}</p>
