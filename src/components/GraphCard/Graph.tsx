@@ -93,18 +93,18 @@ const Graph: FC<IGraphProps> = ({data}) => {
                 bodyFont: {
                     family: 'Inter',
                     size: 16,
-                    weight: "400",
+                    weight: 'normal' as 'normal',
                 },
                 titleFont: {
                     family: 'Inter',
                     size: 12,
-                    weight: "300",
+                    weight: 'lighter' as 'lighter',
                 },
                 titleColor: '#AFAFC6',
                 footerFont: {
                     family: 'Inter',
                     size: 12,
-                    weight: "400",
+                    weight: 'normal' as 'normal',
                 },
                 footerColor: '#9BABC5',
                 titleMarginBottom: 8,
@@ -135,7 +135,7 @@ const Graph: FC<IGraphProps> = ({data}) => {
                     font: {
                         family: 'Inter',
                         size: 12,
-                        weight: "300",
+                        weight: 'lighter' as 'lighter',
                     },
                     callback: function (this: Scale<CoreScaleOptions>, tickValue: string | number, index: number, ticks: Tick[]): number {
                         return +this.getLabelForValue(index).split('-')[2];
@@ -159,7 +159,7 @@ const Graph: FC<IGraphProps> = ({data}) => {
                     font: {
                         family: 'Inter',
                         size: 14,
-                        weight: "300",
+                        weight: 'lighter' as 'lighter',
                     },
                     callback: (value: string | number, index: number, ticks: Tick[]): string => {
                         const resValue = +(value);
