@@ -28,6 +28,8 @@ interface IPropsMenuBurger {
     User: IGetCurrentUserInfo
 }
 
+const logoutEndpoint = `${process.env.REACT_APP_API_URL}/logout`;
+
 const MenuBurger: FC<IPropsMenuBurger> = ({ setMenuActive, isMenuActive, User }) => {
     const ThemeStore = useAppSelector<IThemeState>(state => state.persistedThemeSlice);
     const { currency } = useAppSelector<ICurrencyState>(state => state.persistedCurrencySlice);
@@ -175,7 +177,7 @@ const MenuBurger: FC<IPropsMenuBurger> = ({ setMenuActive, isMenuActive, User })
                 <ul className={classes.list}>
                     <li>
                         <button onClick={LogOut}>
-                            <Link to={"https://api.cash-money.store/logout"} key={'erf2'} className={classes.item}>
+                            <Link to={logoutEndpoint} key={'erf2'} className={classes.item}>
                                 <i className="bi bi-box-arrow-left"></i>
                                 <h3 className={classes.title}>Log <span style={{ color: 'var(--main-green)' }}>Out</span></h3>
                             </Link>

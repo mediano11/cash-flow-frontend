@@ -15,6 +15,8 @@ interface IContenxtUserProps {
     buttonRef: React.RefObject<HTMLElement>
 }
 
+const logoutEndpoint = `${process.env.REACT_APP_API_URL}/logout`;
+
 const ContextUser: FC<IContenxtUserProps> = ({ isActive, setIsActive, buttonRef }) => {
     const UserSliceDispatch = useActionCreators(UserSliceActions);
     const LogOut = () => {
@@ -42,7 +44,7 @@ const ContextUser: FC<IContenxtUserProps> = ({ isActive, setIsActive, buttonRef 
                     </li>
                     <li className={classes.item}>
                         <button onClick={LogOut}>
-                            <Link to={"https://api.cash-money.store/logout"} style={{cursor: 'pointer'}}>
+                            <Link to={logoutEndpoint} style={{cursor: 'pointer'}}>
                                 <h4 className={classes.Link}>Log <span style={{ color: 'var(--main-green)' }}>Out</span></h4>
                             </Link>
                         </button>

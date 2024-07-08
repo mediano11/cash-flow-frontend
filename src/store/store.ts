@@ -32,9 +32,7 @@ export const store = configureStore({
     },
     devTools: devToolsCompose,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-        serializableCheck: {
-            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
+        serializableCheck: false
     }).concat(api.middleware)
 })
 

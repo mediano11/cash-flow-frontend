@@ -12,7 +12,8 @@ import devicesLight from '@assets/devicesLight.png';
 import { useAppSelector } from "@hooks/storeHooks/useAppStore";
 import { IThemeState } from "@store/UI_store/ThemeSlice/ThemeInterfaces";
 
-//logic
+
+const loginEndpoint = `${process.env.REACT_APP_API_URL}/login`;
 
 const Login: FC = () => {
 
@@ -37,7 +38,7 @@ const Login: FC = () => {
                 </div>
                 <div className={classes.form}>
                     <h2 className={classes.title}>Log <span style={{ color: 'var(--main-green)' }}>In</span></h2>
-                    <Link to="https://api.cash-money.store/login" className={classes.SubmitButton}>
+                    <Link to={loginEndpoint} className={classes.SubmitButton}>
                         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                             <img src={googleSvg} style={{ width: '26px' }} alt='google svg'></img>Log In with Google</div>
                     </Link>
